@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Manrope:wght@200..800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.shadow {
+  border-radius: 6px;
+  background: #ffffff;
+  box-shadow: 10px 10px 60px #cacaca62, -10px -10px 60px #f6f6f64c;
+}
+
+.shadow-2 {
+  border-radius: 7px;
+  background: #ffffff;
+  box-shadow: 5px 5px 18px #3b3b3b3e, -5px -5px 18px #2e2e2e24;
+}
+.form {
+  max-width: 490px;
+  min-height: 553px;
+}
+.list-circle {
+  list-style: circle;
+}
+
+li {
+  margin: 5px 0px;
+}
+.heroBg {
+  position: absolute;
+  background-color: #36de721f;
+  /* background-color: #0f652d9e; */
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 400px;
+  border-radius: 100%;
+  z-index: -1;
+  filter: blur(35px);
+}
+
+@layer utilities {
+  .leading-15 {
+    line-height: 55px;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+.scale-up {
+  transition: transform 0.6s ease;
+}
+
+.scale-up:hover {
+  transform: scale(1.05);
+}
+
+@keyframes fade-in-scale {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade {
+  animation: fade-in-scale 0.5s ease-in-out forwards;
+}
